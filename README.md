@@ -31,3 +31,6 @@ MINISHELL : Minishell is a program that simulates the basic behavior of a comman
 <img width="2178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/MINISHELL/minishell.png">
 
 ------------------------------------------------------------------------------------------------------------------------------------
+CPP : An suite of mini-project in C++98. 
+
+------------------------------------------------------------------------------------------------------------------------------------
