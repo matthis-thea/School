@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   FragTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/18 02:39:52 by haze              #+#    #+#             */
-/*   Updated: 2023/09/18 02:59:12 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/18 11:39:29 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ FragTrap::FragTrap(std::string name) : ClapTrap(name)
 	std::cout << DDD << "FragTrap constructor " << _name << " was created" << NC << std::endl;
 }
 
-FragTrap::FragTrap(void) {
+FragTrap::FragTrap(void) : ClapTrap() {
 	this->_name = "Soldat Ryan";
 	this->_hit_points = 100;
 	this->_energy_points = 100;

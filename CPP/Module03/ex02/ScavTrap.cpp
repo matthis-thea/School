@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ScavTrap.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/14 20:26:19 by haze              #+#    #+#             */
-/*   Updated: 2023/09/15 17:20:43 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/18 11:39:33 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
 	std::cout << CYN << "ScavTrap constructor " << _name << " was created" << NC << std::endl;
 }
 
-ScavTrap::ScavTrap(void) {
+ScavTrap::ScavTrap(void) : ClapTrap() {
 	this->_name = "Soldat Ryan";
 	this->_hit_points = 100;
 	this->_energy_points = 50;
