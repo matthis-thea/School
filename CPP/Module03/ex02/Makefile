@@ -6,20 +6,20 @@
 #    By: haze <haze@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/13 19:18:54 by haze              #+#    #+#              #
-#    Updated: 2023/09/18 02:40:18 by haze             ###   ########.fr        #
+#    Updated: 2023/09/18 03:03:04 by haze             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-CLAPTRAP = main.cpp ClapTrap.cpp ScavTrap.cpp
+CLAPTRAP = main.cpp ClapTrap.cpp ScavTrap.cpp FragTrap.cpp
 # VARIABLES FOR DOT O
 CLAPTRAP_OBJ = $(CLAPTRAP:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = scavtrap
+NAME = fragtrap
 RM = rm -rf
 #--------------------------------------------
 #-----------------EXECUTING------------------
