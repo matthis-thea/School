@@ -1,37 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Wrong.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 02:45:31 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:22 by haze             ###   ########.fr       */
+/*   Created: 2023/09/21 11:56:49 by haze              #+#    #+#             */
+/*   Updated: 2023/09/21 12:17:00 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT
-#define CAT
+#ifndef WRONG
+#define WRONG
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
 #define NC "\e[0m"
 #define RED "\e[0;31m"
 #define GRN "\e[0;32m"
 #define CYN "\e[0;36m"
 #define REDB "\e[41m"
 
-class Cat : public Animal
+class WrongAnimal
 {
     protected:
         std::string _type;
 	public:
-		Cat(void);
-		Cat(const Cat &clap);
-		Cat &operator=(const Cat &clap);
-		virtual ~Cat();
+		WrongAnimal(std::string name);
+		WrongAnimal(void);
+		WrongAnimal(const WrongAnimal &clap);
+		WrongAnimal &operator=(const WrongAnimal &clap);
+		virtual ~WrongAnimal();
 		std::string     getType(void) const;
-		virtual void makeSound() const;
+		void makeSound() const ;
+};
+
+class WrongCat : public WrongAnimal
+{
+    protected:
+        std::string _type;
+	public:
+		WrongCat(std::string name);
+		WrongCat(void);
+		WrongCat(const WrongCat &clap);
+		WrongCat &operator=(const WrongCat &clap);
+		virtual ~WrongCat();
+		std::string     getType(void) const;
+		void makeSound() const ;
 };
 
 #endif

@@ -1,45 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 11:11:36 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:16 by haze             ###   ########.fr       */
+/*   Created: 2023/09/21 12:47:13 by haze              #+#    #+#             */
+/*   Updated: 2023/09/21 12:49:12 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Cat.hpp"
+#include "Brain.hpp"
 
-Cat::Cat(void) : Animal("Cat") {
-	std::cout << "Cat constructor was created" << std::endl;
+Brain::Brain(void) {
+	std::cout << "Brain constructor was created" << std::endl;
 }
 
-Cat::Cat(const Cat &clap) : Animal() {
-	std::cout << "Cat Copy constructor called" << std::endl;
+Brain::Brain(const Brain &clap) {
+	std::cout << "Brain Copy constructor called" << std::endl;
     *this = clap;
 }
 
-Cat& Cat::operator=(const Cat &clap)
+Brain& Brain::operator=(const Brain &clap)
 {
 	if (this != &clap)
 	{
-		this->_type= clap._type;
+		for (int i = 0; i < 100; i++) {
+            this->_ideas[i] = clap._ideas[i];
+        }
 	}
 	return (*this);
 }
 
-Cat::~Cat(void) {
-	std::cout << "Cat deconstructor called" << std::endl;
-}
-
-std::string Cat::getType(void) const
-{
-	return (this->_type);
-}
-
-void Cat::makeSound() const
-{
-	std::cout << "Cat cry" << std::endl;
+Brain::~Brain(void) {
+	std::cout << "Brain deconstructor called" << std::endl;
 }

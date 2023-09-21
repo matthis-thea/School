@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 02:41:59 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 02:44:59 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/21 11:52:31 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ class Dog: public Animal
      protected:
         std::string _type;
 	public:
-		Dog(std::string name);
 		Dog(void);
 		Dog(const Dog &clap);
 		Dog &operator=(const Dog &clap);
-		~Dog();
-        void make_sound(void) const;
+		virtual ~Dog();
+		std::string     getType(void) const;
+        virtual void makeSound() const;
 };
 #endif

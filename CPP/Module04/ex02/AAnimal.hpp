@@ -1,37 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 02:45:31 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:22 by haze             ###   ########.fr       */
+/*   Created: 2023/09/21 02:37:43 by haze              #+#    #+#             */
+/*   Updated: 2023/09/21 13:22:29 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT
-#define CAT
+#ifndef ANIMAL
+#define ANIMAL
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
 #define NC "\e[0m"
 #define RED "\e[0;31m"
 #define GRN "\e[0;32m"
 #define CYN "\e[0;36m"
 #define REDB "\e[41m"
 
-class Cat : public Animal
+class AAnimal
 {
     protected:
         std::string _type;
 	public:
-		Cat(void);
-		Cat(const Cat &clap);
-		Cat &operator=(const Cat &clap);
-		virtual ~Cat();
+		AAnimal(std::string name);
+		AAnimal(void);
+		AAnimal(const AAnimal &clap);
+		AAnimal &operator=(const AAnimal &clap);
+		virtual ~AAnimal();
 		std::string     getType(void) const;
-		virtual void makeSound() const;
+		virtual void makeSound() const = 0;
 };
 
 #endif

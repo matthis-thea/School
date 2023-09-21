@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:11:36 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:16 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/21 13:44:00 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,12 @@
 
 Cat::Cat(void) : Animal("Cat") {
 	std::cout << "Cat constructor was created" << std::endl;
+    try {
+		this->_brain = new Brain();
+	}
+	catch(const std::exception& e) {
+		std::cerr << "Dynamic allocation failed"<< std::endl;
+	}
 }
 
 Cat::Cat(const Cat &clap) : Animal() {
@@ -32,6 +38,7 @@ Cat& Cat::operator=(const Cat &clap)
 
 Cat::~Cat(void) {
 	std::cout << "Cat deconstructor called" << std::endl;
+	delete _brain;
 }
 
 std::string Cat::getType(void) const

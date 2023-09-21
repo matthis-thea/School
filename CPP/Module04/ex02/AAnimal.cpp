@@ -1,34 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 02:38:52 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:51:33 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/21 13:27:25 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
-Animal::Animal(void) {
-	this->_type = "Animal";
-	std::cout << "Animal constructor was created" << std::endl;
+AAnimal::AAnimal(void) {
+	this->_type = "AAnimal";
+	std::cout << "AAnimal constructor was created" << std::endl;
 }
 
-Animal::Animal(std::string name)
+AAnimal::AAnimal(std::string name)
 {
 	this->_type = name;
-	std::cout << "Animal constructor with parametres was created" << std::endl;
+	std::cout << "AAnimal constructor with parametres was created" << std::endl;
 }
 
-Animal::Animal(const Animal &clap) {
-	std::cout << "Animal Copy constructor called" << std::endl;
+AAnimal::AAnimal(const AAnimal &clap) {
+	std::cout << "AAnimal Copy constructor called" << std::endl;
     *this = clap;
 }
 
-Animal& Animal::operator=(const Animal &clap)
+AAnimal& AAnimal::operator=(const AAnimal &clap)
 {
 	if (this != &clap)
 	{
@@ -37,16 +37,11 @@ Animal& Animal::operator=(const Animal &clap)
 	return (*this);
 }
 
-Animal::~Animal(void) {
-	std::cout << "Animal deconstructor called" << std::endl;
+AAnimal::~AAnimal(void) {
+	std::cout << "AAnimal deconstructor called" << std::endl;
 }
 
-std::string Animal::getType(void) const
+std::string AAnimal::getType(void) const
 {
 	return (this->_type);
-}
-
-void Animal::makeSound() const
-{
-	std::cout << "Animal cry" << std::endl;
 }

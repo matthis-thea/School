@@ -1,37 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/21 02:45:31 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:22 by haze             ###   ########.fr       */
+/*   Created: 2023/09/21 12:41:30 by haze              #+#    #+#             */
+/*   Updated: 2023/09/21 12:49:20 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT
-#define CAT
+#ifndef BRAIN
+#define BRAIN
 #include <iostream>
 #include <string>
-#include "Animal.hpp"
 #define NC "\e[0m"
 #define RED "\e[0;31m"
 #define GRN "\e[0;32m"
 #define CYN "\e[0;36m"
 #define REDB "\e[41m"
 
-class Cat : public Animal
+class Brain
 {
-    protected:
-        std::string _type;
+    private:
+        std::string _ideas[100];
 	public:
-		Cat(void);
-		Cat(const Cat &clap);
-		Cat &operator=(const Cat &clap);
-		virtual ~Cat();
-		std::string     getType(void) const;
-		virtual void makeSound() const;
+		Brain(void);
+		Brain(const Brain &clap);
+		Brain &operator=(const Brain &clap);
+		~Brain();
 };
 
 #endif

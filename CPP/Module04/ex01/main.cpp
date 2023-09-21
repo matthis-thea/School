@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:18:32 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:35:38 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/21 13:04:53 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,31 +16,16 @@
 
 int main( void )
 {
-    const Animal* A = new Animal();
-    const Animal* D = new Dog();
-    const Animal* C = new Cat();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
+    const Animal* animals[8] = { new Dog(), new Dog(), new Dog(), new Dog(), new Cat(), new Cat(), new Cat(), new Cat() };
+    for ( int i = 0; i < 8; i++ ) {
+        delete animals[i];
+    }
 
-    std::cout << "D Type: " << D->getType() << " " << std::endl;
-    std::cout << "C Type: " << C->getType() << " " << std::endl;
-    std::cout << "A Type: " << A->getType() << " " << std::endl;
-    C->makeSound();
-    D->makeSound();
-    A->makeSound();
+    delete j;//should not create a leak
+    delete i;
 
-    delete  A;
-    delete  D;
-    delete  C;
 
-    std::cout << std::endl << std::endl;
-    const WrongAnimal *W = new WrongAnimal();
-    const WrongAnimal *Z = new WrongCat();
-
-    std::cout << "W Type: " << W->getType() << " " << std::endl;
-    std::cout << "Z Type: " << Z->getType() << " " << std::endl;
-    W->makeSound();
-    Z->makeSound();
-
-    delete  W;
-    delete  Z;
     return 0;
 }

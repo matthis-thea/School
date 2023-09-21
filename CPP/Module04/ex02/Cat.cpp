@@ -6,17 +6,23 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:11:36 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:16 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/21 13:30:38 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 
-Cat::Cat(void) : Animal("Cat") {
+Cat::Cat(void) : AAnimal("Cat") {
 	std::cout << "Cat constructor was created" << std::endl;
+    try {
+		this->_brain = new Brain();
+	}
+	catch(const std::exception& e) {
+		std::cerr << "Dynamic allocation failed"<< std::endl;
+	}
 }
 
-Cat::Cat(const Cat &clap) : Animal() {
+Cat::Cat(const Cat &clap) : AAnimal() {
 	std::cout << "Cat Copy constructor called" << std::endl;
     *this = clap;
 }
@@ -31,6 +37,7 @@ Cat& Cat::operator=(const Cat &clap)
 }
 
 Cat::~Cat(void) {
+	delete _brain;
 	std::cout << "Cat deconstructor called" << std::endl;
 }
 
