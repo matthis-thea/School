@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:18:32 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:35:38 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/22 10:29:59 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "Wrong.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main( void )
 {

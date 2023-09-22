@@ -3,17 +3,17 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: haze <haze@student.42.fr>                  +#+  +:+       +#+         #
+#    By: mthea <mthea@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/09/18 03:13:11 by haze              #+#    #+#              #
-#    Updated: 2023/09/21 11:56:48 by haze             ###   ########.fr        #
+#    Updated: 2023/09/22 10:29:35 by mthea            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-CLAPTRAP = main.cpp Dog.cpp Cat.cpp Animal.cpp Wrong.cpp
+CLAPTRAP = main.cpp Dog.cpp Cat.cpp Animal.cpp WrongAnimal.cpp WrongCat.cpp
 # VARIABLES FOR DOT O
 CLAPTRAP_OBJ = $(CLAPTRAP:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:11:36 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:44:00 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/22 10:34:07 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ Cat& Cat::operator=(const Cat &clap)
 	if (this != &clap)
 	{
 		this->_type= clap._type;
+		this->_brain = new Brain( *clap._brain );
 	}
 	return (*this);
 }

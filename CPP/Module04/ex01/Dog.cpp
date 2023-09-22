@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:14:37 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:44:31 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/22 10:34:02 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,7 @@ Dog& Dog::operator=(const Dog &clap)
 	if (this != &clap)
 	{
 		this->_type= clap._type;
+		this->_brain = new Brain( *clap._brain );
 	}
 	return (*this);
 }

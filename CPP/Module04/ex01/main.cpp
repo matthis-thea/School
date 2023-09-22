@@ -3,16 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 11:18:32 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:04:53 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/22 10:35:53 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Cat.hpp"
 #include "Dog.hpp"
-#include "Wrong.hpp"
+#include "WrongAnimal.hpp"
+#include "WrongCat.hpp"
 
 int main( void )
 {
@@ -22,10 +23,11 @@ int main( void )
     for ( int i = 0; i < 8; i++ ) {
         delete animals[i];
     }
-
     delete j;//should not create a leak
     delete i;
-
-
+    // Dog basic;
+    // {
+    //     Dog tmp = basic;
+    // }
     return 0;
 }
