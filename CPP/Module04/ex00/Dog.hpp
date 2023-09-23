@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 02:41:59 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 11:52:31 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/23 17:45:25 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 
 class Dog: public Animal
 {
-     protected:
-        std::string _type;
 	public:
 		Dog(void);
 		Dog(const Dog &clap);

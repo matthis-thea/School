@@ -6,7 +6,7 @@
 /*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/22 10:25:07 by mthea             #+#    #+#             */
-/*   Updated: 2023/09/22 10:26:55 by mthea            ###   ########.fr       */
+/*   Updated: 2023/09/23 17:46:50 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,6 @@
 
 class WrongCat : public WrongAnimal
 {
-    protected:
-        std::string _type;
 	public:
 		WrongCat(std::string name);
 		WrongCat(void);

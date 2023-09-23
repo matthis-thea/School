@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Cat.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 02:45:31 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 12:50:42 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/23 17:46:16 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@
 
 class Cat : public Animal
 {
-    protected:
-        std::string _type;
 	private:
 		Brain *_brain;
 	public:

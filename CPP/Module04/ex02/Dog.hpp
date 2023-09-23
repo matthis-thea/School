@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: mthea <mthea@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/21 02:41:59 by haze              #+#    #+#             */
-/*   Updated: 2023/09/21 13:24:35 by haze             ###   ########.fr       */
+/*   Updated: 2023/09/23 17:47:30 by mthea            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,6 @@
 
 class Dog: public AAnimal
 {
-    protected:
-        std::string _type;
 	private:
 		Brain *_brain;
 	public:
