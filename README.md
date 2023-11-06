@@ -36,6 +36,6 @@ CPP : An suite of mini-project in C++98.
 ------------------------------------------------------------------------------------------------------------------------------------
 CUB3D : This project is inspired by the world-famous game of the same name, considered the first FPS ever developed. This project allowed me to explore
 the ray-casting technique. the objective was to create a dynamic view within a labyrinth, in which we must find our way.
-<img width="2178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d1.png">
-<img width="2178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d2.png">
-<img width="2178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d3.png">
+<img width="1178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d1.png">
+<img width="1178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d2.png">
+<img width="1178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d3.png">
