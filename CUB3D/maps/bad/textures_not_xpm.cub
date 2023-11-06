@@ -1,0 +1,21 @@
+SO textures/32/forbd.png
+WE textures/32/west.png
+EA textures/32/east.png
+NO textures/32/north.c
+
+F 20,20,20
+C 200,200,200
+
+11111
+10001
+10S01
+10001
+10001
+10001
+11001
+10001
+10001
+10001
+10001
+10001
+11111
