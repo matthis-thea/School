@@ -38,6 +38,5 @@ CUB3D : This project is inspired by the world-famous game of the same name, cons
 the ray-casting technique. the objective was to create a dynamic view within a labyrinth, in which we must find our way.
 </br>
 <img width="178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d1.png">
-</br>
 <img width="178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d2.png">
 <img width="178" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d3.png">
