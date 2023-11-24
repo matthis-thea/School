@@ -1,24 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/22 16:34:46 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 15:12:38 by haze             ###   ########.fr       */
+/*   Created: 2023/11/24 16:45:27 by haze              #+#    #+#             */
+/*   Updated: 2023/11/24 16:53:33 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ScalarConverter.hpp"
+#include "Data.hpp"
 
-int main(int argc, char **argv)
+uintptr_t serialize(Data *ptr)
 {
-	if (argc == 1)
-	{
-		std::cout << "Error: Please enter literal\n" << std::endl;
-		return (1);
-	}
-	ScalarConverter::convert(argv[1]);
-	return (1);
+	return reinterpret_cast<uintptr_t>(ptr);
+}
+
+Data *deserialize(uintptr_t raw)
+{
+	return reinterpret_cast<Data*>(raw);
 }

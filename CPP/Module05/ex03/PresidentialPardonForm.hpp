@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.hpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thib <thib@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 12:05:18 by tserdet           #+#    #+#             */
-/*   Updated: 2023/11/17 18:19:28 by thib             ###   ########.fr       */
+/*   Created: 2023/11/24 14:32:17 by haze              #+#    #+#             */
+/*   Updated: 2023/11/24 14:32:18 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef PRESIDENTIALPARDONFORM_H
 # define PRESIDENTIALPARDONFORM_H

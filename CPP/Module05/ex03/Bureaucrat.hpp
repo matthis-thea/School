@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   Bureaucrat.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thib <thib@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/13 12:30:09 by thib              #+#    #+#             */
-/*   Updated: 2023/11/17 18:19:18 by thib             ###   ########.fr       */
+/*   Created: 2023/11/24 14:31:58 by haze              #+#    #+#             */
+/*   Updated: 2023/11/24 14:32:00 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+
 
 #ifndef BUREAUCRAT_CLASS_H
 # define BUREAUCRAT_CLASS_H

@@ -1,7 +1,7 @@
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-BUREAUCRAT = main.cpp Bureaucrat.cpp
+BUREAUCRAT = main.cpp ScalarConverter.cpp
 # VARIABLES FOR DOT O
 BUREAUCRAT_OBJ = $(BUREAUCRAT:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION

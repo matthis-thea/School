@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   PresidentialPardonForm.cpp                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: thib <thib@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/16 12:05:12 by tserdet           #+#    #+#             */
-/*   Updated: 2023/11/17 13:45:14 by thib             ###   ########.fr       */
+/*   Created: 2023/11/24 14:32:14 by haze              #+#    #+#             */
+/*   Updated: 2023/11/24 14:32:15 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 
 #include "PresidentialPardonForm.hpp"
 
