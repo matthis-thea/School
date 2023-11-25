@@ -5,69 +5,53 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 14:32:21 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:32:22 by haze             ###   ########.fr       */
+/*   Created: 2023/11/21 16:04:12 by haze              #+#    #+#             */
+/*   Updated: 2023/11/25 14:32:11 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "RobotomyRequestForm.hpp"
+#include <ctime>
+#include <cstdlib>
 
-static int half_time = 0;
-
-RobotomyRequestForm::RobotomyRequestForm(void) : AForm("DefaultRobotomyRequestForm", 72, 45, "Default")
+RobotomyRequestForm::RobotomyRequestForm(void): AForm(72, "RobotomyRequestForm", "Personne", 45), _target("louis")
 {
-	std::cout <<CYN<< "Default RobotomyRequestForm constructor called" <<NC<< std::endl;
-	return;
+	std::cout << "RobotomyRequestForm constructor was created" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string name, std::string target): AForm(name, 72, 45, target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm(72, "RobotomyRequestForm",target, 45), _target(target)
 {
-	std::cout <<CYN<< name <<" AForm RobotomyRequestForm constructor called" <<NC<< std::endl;
-	return;
+	std::cout << "RobotomyRequestForm constructor was created" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm( RobotomyRequestForm const & src) : AForm(src)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src): AForm(src), _target(src._target)
 {
-	std::cout <<CYN<< "Copy RobotomyRequestForm constructor called" <<NC<< std::endl;
-	*this = src;
-	return;
+	std::cout << "Copy RobotomyRequestForm constructor was created" << std::endl;
 }
 
-RobotomyRequestForm::~RobotomyRequestForm(void)
+RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &src)
 {
-	std::cout <<CYN<< "Default RobotomyRequestForm destructor called" <<NC<< std::endl;
-	return;
-}
-
-void RobotomyRequestForm::execute(Bureaucrat const & executor) const
-{
-	if (executor.getGrade() < this->getGradeExec() && this->getSigned() == 1)
-	{
-		std::cout <<"Bureaucrat "<< executor.getName() <<  " executed RobotomyRequestForm" << std::endl;
-		std::cout <<RED<< "---DRILLING NOISE---" <<NC<< std::endl;
-		if (half_time++ % 2 == 0)
-			std::cout << this->getTarget() << " has been robotomized" << std::endl;
-		else
-			std::cout << this->getTarget() << " robotomy failed" << std::endl;
-	}
-	else
-		std::cout << "Bureaucrat " << executor.getName() <<  " cannot execute RobotomyRequestForm" << std::endl;
-}
-
-RobotomyRequestForm& RobotomyRequestForm::operator=( RobotomyRequestForm const & hrs)
-{
-	std::cout << "RobotomyRequestForm Assignation operator called" << std::endl;
-	if (this == &hrs)
+	std::cout << "RobotomyRequestForm surchage constructor was created" << std::endl;
+	if (this == &src)
 		return *this;
 	return *this;
 }
 
-std::ostream	&operator<<(std::ostream &o, RobotomyRequestForm *a)
+RobotomyRequestForm::~RobotomyRequestForm(void)
 {
-	o << "AForm " << a->getName() << ", signed: " << a->getSigned()
-		<< ", grade to sign: " << a->getGradeSign() << ", grade to exec: " << a->getGradeExec()<< ", target: "
-		<< a->getTarget() << std::endl;
-	return (o);
+	std::cout << "RobotomyRequestForm deconstructor was created" << std::endl;
+}
+
+void RobotomyRequestForm::execute(const Bureaucrat &executor) const
+{
+	std::srand(time(NULL));
+
+	if (executor.getGrade() > this->GetGradeExecute())
+		throw (AForm::NotExecute());
+	else if (this->GetSigned() == false)
+		throw (AForm::NotSigned());
+	if (rand() % 2 == 0)
+		std::cout << this->GetTarget() << " has been robotomized !" << std::endl;
+	else
+		std::cout << this->GetTarget() << " robotomized failure !" << std::endl;
 }

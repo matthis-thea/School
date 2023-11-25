@@ -6,18 +6,18 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/20 09:43:16 by haze              #+#    #+#             */
-/*   Updated: 2023/11/21 14:42:39 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/25 14:26:49 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
 
-AForm::AForm(void):  _name("Francis"),_Issigned(false), _grade_sign(50), _grade_execute(50)
+AForm::AForm(void):  _name("Francis"), _target("Personne"), _Issigned(false), _grade_sign(50), _grade_execute(50)
 {
 	std::cout << "AForm constructor was created" << std::endl;
 }
 
-AForm::AForm(const int grade_sign, const std::string name, const int grade_exec):_name(name), _grade_sign(grade_sign), _grade_execute(grade_exec)
+AForm::AForm(const int grade_sign, const std::string name,  const std::string target, const int grade_exec):_name(name), _target(target), _grade_sign(grade_sign), _grade_execute(grade_exec)
 {
 	if (grade_exec > 150)
 		throw AForm::GradeTooLowException();
@@ -93,4 +93,20 @@ const char * AForm::GradeTooHighException::what() const throw ()
 const char * AForm::GradeTooLowException::what() const throw ()
 {
 	return ("Your Grade is too Low");
+}
+
+const char * AForm::NotExecute::what() const throw ()
+{
+	return ("Your grade execution is too Low !");
+}
+
+const char * AForm::NotSigned::what() const throw ()
+{
+	return ("Formulaire Not signed !");
+}
+
+
+std::string AForm::GetTarget() const 
+{
+	return this->_target;
 }

@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/18 11:19:52 by haze              #+#    #+#             */
-/*   Updated: 2023/11/21 15:19:32 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/25 13:34:16 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 #include <iostream>
 #include <string>
 #include <exception>
+#include <ctime>
 #include "AForm.hpp"
 
 class AForm;

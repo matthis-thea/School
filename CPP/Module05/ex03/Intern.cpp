@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:32:03 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:32:04 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/25 14:58:56 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,17 +35,17 @@ Intern::Intern(Intern const & src)
 
 static AForm	*makePresident(const std::string target)
 {
-	return (new PresidentialPardonForm("Presidential", target));
+	return (new PresidentialPardonForm(target));
 }
 
 static AForm	*makeRobot(const std::string target)
 {
-	return (new RobotomyRequestForm("Robotomy", target));
+	return (new RobotomyRequestForm(target));
 }
 
 static AForm	*makeShrubbery(const std::string target)
 {
-	return (new ShrubberyCreationForm("Shrubbery", target));
+	return (new ShrubberyCreationForm(target));
 }
 
 AForm	*Intern::makeForm(const std::string name, const std::string target)

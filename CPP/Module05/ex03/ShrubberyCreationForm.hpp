@@ -5,41 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 14:32:38 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:32:41 by haze             ###   ########.fr       */
+/*   Created: 2023/11/21 14:51:58 by haze              #+#    #+#             */
+/*   Updated: 2023/11/21 16:10:35 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
-#ifndef SHRUBBERYCREATIONFORM_CLASS_H
-# define SHRUBBERYCREATIONFORM_CLASS_H
-#pragma once
-#define NC "\e[0m"
-#define RED "\e[0;31m"
-#define GRN "\e[0;32m"
-#define CYN "\e[0;36m"
-#define REDB "\e[41m"
-#include <fstream>
-#include <iostream>
-#include <string>
+#ifndef SHRUBERRYCREATIONFORM
+#define SHRUBERRYCREATIONFORM
 #include "AForm.hpp"
-#include "Bureaucrat.hpp"
-
-class Bureaucrat;
+#include "fstream"
 
 class AForm;
 
-class	ShrubberyCreationForm : public AForm
+class ShrubberyCreationForm : public AForm
 {
+	private:
+		std::string _target;
 	public:
 		ShrubberyCreationForm(void);
-		ShrubberyCreationForm(std::string name, std::string target);
-		ShrubberyCreationForm(ShrubberyCreationForm const & src);
+		ShrubberyCreationForm(std::string target);
+		ShrubberyCreationForm(const ShrubberyCreationForm &src);
+		ShrubberyCreationForm &operator=(const ShrubberyCreationForm &src);
 		~ShrubberyCreationForm(void);
-		void execute(Bureaucrat const & executor) const;
+		void execute(const Bureaucrat &executor) const;
 
-		ShrubberyCreationForm &operator=( ShrubberyCreationForm const & hrs);
 };
-std::ostream	&operator<<(std::ostream &o, ShrubberyCreationForm *a);
+
 #endif

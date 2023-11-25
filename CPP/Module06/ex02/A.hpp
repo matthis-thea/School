@@ -1,25 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   A.hpp                                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 16:47:17 by haze              #+#    #+#             */
-/*   Updated: 2023/11/25 11:54:31 by haze             ###   ########.fr       */
+/*   Created: 2023/11/25 11:45:16 by haze              #+#    #+#             */
+/*   Updated: 2023/11/25 11:49:12 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA
-#define DATA
-#include <stdint.h>
-#include <iostream>
-struct Data
-{
-	std::string name;
-	int			number;
-};
 
-uintptr_t serialize(Data *ptr);
-Data *deserialize(uintptr_t raw);
+#ifndef A
+#define A
+
+# include "Base.hpp"
+
+class A : 
+	public 
+		Base {};
+
 #endif

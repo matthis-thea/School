@@ -1,13 +1,13 @@
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-FORMS = main.cpp  Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp Intern.cpp
+BUREAUCRAT = main.cpp Base.cpp
 # VARIABLES FOR DOT O
-FORMS_OBJ = $(FORMS:.cpp=.o)
+BUREAUCRAT_OBJ = $(BUREAUCRAT:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = form
+NAME = data
 RM = rm -rf
 #--------------------------------------------
 #-----------------EXECUTING------------------
@@ -15,11 +15,11 @@ RM = rm -rf
 all : $(NAME)
 %.o : %.cpp
 	@$(CC) $(CXXFLAGS) -c $< -o $@
-$(NAME) : $(FORMS_OBJ)
-	$(CC) $(CXXFLAGS) $(FORMS_OBJ) -o $(NAME)
+$(NAME) : $(BUREAUCRAT_OBJ)
+	$(CC) $(CXXFLAGS) $(BUREAUCRAT_OBJ) -o $(NAME)
 
 clean :
-	$(RM) $(FORMS_OBJ)
+	$(RM) $(BUREAUCRAT_OBJ)
 
 fclean :	clean
 	$(RM) $(NAME)

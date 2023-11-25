@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 14:32:10 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:32:11 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/25 15:06:41 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,43 +21,18 @@
 
 int main(void)
 {
-	std::cout << GRN << "----------------SHRUBBERY TEST-------------" << NC << std::endl;
-	Bureaucrat *a = new Bureaucrat(1);
-	AForm *b = new ShrubberyCreationForm("SHRUBBERY", "file");
-	std::cout << b << std::endl;
-	std::cout << a << std::endl;
-	a->signForm(b);
-	b->execute(*a);
-	std::cout << b << std::endl;
-	std::cout << GRN<<"----------------ROBOTOMY TEST-------------" <<NC<< std::endl;
-	Bureaucrat *c = new Bureaucrat(1);
-	AForm *d = new RobotomyRequestForm("ROBOTOMY", "Popeye");
-	std::cout << d << std::endl;
-	std::cout << c << std::endl;
-	c->signForm(d);
-	d->execute(*c);
-	d->execute(*c);
-	d->execute(*c);
-	d->execute(*c);
-	std::cout << d << std::endl;
-	std::cout << GRN << "----------------PRESIDENTIAL TEST-------------" << NC << std::endl;
-	Bureaucrat *e = new Bureaucrat(1);
-	AForm *f = new PresidentialPardonForm("PRESIDENTIAL", "Mickey");
-	std::cout << f << std::endl;
-	std::cout << e << std::endl;
-	e->signForm(f);
-	f->execute(*e);
-	std::cout << f << std::endl;
-	std::cout << GRN << "----------------INTERN TEST-------------" << NC << std::endl;
-	Intern *g = new Intern();
-	AForm *h = g->makeForm("PresidentialPardonForm", "Bender");
-	if (h)
-		a->signForm(h);
-	delete a;
-	delete b;
-	delete c;
-	delete d;
-	delete e;
-	delete f;
-	delete g;
+	std::cout << "----------------SHRUBBERY TEST-------------" << std::endl;
+	Bureaucrat bureaucrat3(1, "Leo");
+	ShrubberyCreationForm rubberry("ANtoine");
+	bureaucrat3.signForm(rubberry);
+	bureaucrat3.executeForm(rubberry);
+	std::cout << "----------------INTERN TEST-------------" << std::endl;
+	Intern *intern = new Intern();
+	AForm *other = intern->makeForm("PresidentialPardonForm", "Lucien");
+	AForm *other2 = intern->makeForm("RobotomyRequestForm", "Kalix");
+	std::cout << *other << std::endl;
+	std::cout << *other2 << std::endl;
+	bureaucrat3.signForm(*other);
+	bureaucrat3.executeForm(*other);
+	delete intern;
 }

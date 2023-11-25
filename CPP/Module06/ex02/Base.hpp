@@ -1,25 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Data.hpp                                           :+:      :+:    :+:   */
+/*   Base.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 16:47:17 by haze              #+#    #+#             */
-/*   Updated: 2023/11/25 11:54:31 by haze             ###   ########.fr       */
+/*   Created: 2023/11/25 11:47:50 by haze              #+#    #+#             */
+/*   Updated: 2023/11/25 11:48:14 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef DATA
-#define DATA
-#include <stdint.h>
-#include <iostream>
-struct Data
+#ifndef BASE
+# define BASE
+
+class Base 
 {
-	std::string name;
-	int			number;
+	public:
+		virtual ~Base();
 };
 
-uintptr_t serialize(Data *ptr);
-Data *deserialize(uintptr_t raw);
 #endif

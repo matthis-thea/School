@@ -6,18 +6,20 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 16:04:12 by haze              #+#    #+#             */
-/*   Updated: 2023/11/21 16:07:12 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/25 14:32:11 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "RobotomyRequestForm.hpp"
+#include <ctime>
+#include <cstdlib>
 
-RobotomyRequestForm::RobotomyRequestForm(void): AForm(25, "RobotomyRequestForm", 5), _target("louis")
+RobotomyRequestForm::RobotomyRequestForm(void): AForm(72, "RobotomyRequestForm", "Personne", 45), _target("louis")
 {
 	std::cout << "RobotomyRequestForm constructor was created" << std::endl;
 }
 
-RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm(25, "RobotomyRequestForm", 5), _target(target)
+RobotomyRequestForm::RobotomyRequestForm(std::string target): AForm(72, "RobotomyRequestForm",target, 45), _target(target)
 {
 	std::cout << "RobotomyRequestForm constructor was created" << std::endl;
 }
@@ -29,8 +31,9 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &src): AForm(
 
 RobotomyRequestForm& RobotomyRequestForm::operator=(const RobotomyRequestForm &src)
 {
-	(void) src;
 	std::cout << "RobotomyRequestForm surchage constructor was created" << std::endl;
+	if (this == &src)
+		return *this;
 	return *this;
 }
 
@@ -41,14 +44,14 @@ RobotomyRequestForm::~RobotomyRequestForm(void)
 
 void RobotomyRequestForm::execute(const Bureaucrat &executor) const
 {
+	std::srand(time(NULL));
+
 	if (executor.getGrade() > this->GetGradeExecute())
-		throw AForm::GradeTooLowException();
+		throw (AForm::NotExecute());
+	else if (this->GetSigned() == false)
+		throw (AForm::NotSigned());
+	if (rand() % 2 == 0)
+		std::cout << this->GetTarget() << " has been robotomized !" << std::endl;
 	else
-	{
-		static int	i;
-		if (i % 2 == 0)
-			std::cout << _target << " has been robotomized !" << std::endl;
-		else
-			std::cout << _target << " robotomized failure !" << std::endl;
-	}
+		std::cout << this->GetTarget() << " robotomized failure !" << std::endl;
 }

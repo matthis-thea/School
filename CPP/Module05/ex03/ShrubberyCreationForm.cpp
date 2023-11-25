@@ -5,87 +5,68 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 14:32:30 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:32:31 by haze             ###   ########.fr       */
+/*   Created: 2023/11/21 16:08:22 by haze              #+#    #+#             */
+/*   Updated: 2023/11/25 14:39:04 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "ShrubberyCreationForm.hpp"
 
-ShrubberyCreationForm::ShrubberyCreationForm(void) : AForm("DefaultShrubberyCreationForm", 145, 137, "Default")
+ShrubberyCreationForm::ShrubberyCreationForm(void): AForm(145, "ShrubberyCreationForm", "Personne", 137), _target("louis")
 {
-	std::cout <<CYN<< "Default ShrubberyCreationForm constructor called" <<NC<< std::endl;
-	return;
+	std::cout << "ShrubberyCreationForm constructor was created" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm(std::string name, std::string target): AForm(name, 145, 137, target)
+ShrubberyCreationForm::ShrubberyCreationForm(std::string target): AForm(145, "ShrubberyCreationForm",target,  137), _target(target)
 {
-	std::cout <<CYN<< name <<" AForm ShrubberyCreationForm constructor called" <<NC<< std::endl;
-	return;
+	std::cout << "ShrubberyCreationForm constructor was created" << std::endl;
 }
 
-ShrubberyCreationForm::ShrubberyCreationForm( ShrubberyCreationForm const & src) : AForm(src)
+ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &src): AForm(src), _target(src._target)
 {
-	std::cout <<CYN<< "Copy ShrubberyCreationForm constructor called" <<NC<< std::endl;
-	*this = src;
-	return;
+	std::cout << "Copy ShrubberyCreationForm constructor was created" << std::endl;
+}
+
+ShrubberyCreationForm& ShrubberyCreationForm::operator=(const ShrubberyCreationForm &src)
+{
+	(void) src;
+	std::cout << "ShrubberyCreationForm surchage constructor was created" << std::endl;
+	return *this;
 }
 
 ShrubberyCreationForm::~ShrubberyCreationForm(void)
 {
-	std::cout <<CYN<< "Default ShrubberyCreationForm destructor called" <<NC<< std::endl;
-	return;
+	std::cout << "ShrubberyCreationForm deconstructor was created" << std::endl;
 }
 
-void ShrubberyCreationForm::execute(Bureaucrat const & executor) const
+void ShrubberyCreationForm::execute(const Bureaucrat &executor) const
 {
-	if (executor.getGrade() < this->getGradeExec() && this->getSigned() == 1)
-	{
-		std::cout <<"Bureaucrat "<< executor.getName() <<  " executed ShrubberyCreationForm" << std::endl;
-		std::ofstream ofs (this->getTarget().c_str(), std::ofstream::out);
-
-		for (int i = 0; i < 5; i++)
-			{
-				ofs <<
-				"         v" << std::endl <<
-				"        >X<" << std::endl <<
-				"         A" << std::endl <<
-				"        d$b" << std::endl <<
-				"      .d\\$$b." << std::endl <<
-				"    .d$i$$\\$$b." << std::endl <<
-				"       d$$@b" << std::endl <<
-				"      d\\$$$ib" << std::endl <<
-				"    .d$$$\\$$$b" << std::endl <<
-				"  .d$$@$$$$\\$$ib." << std::endl <<
-				"      d$$i$$b" << std::endl <<
-				"     d\\$$$$@$b" << std::endl <<
-				"  .d$@$$\\$$$$$@b." << std::endl <<
-				".d$$$$i$$$\\$$$$$$b." << std::endl <<
-				"        ###" << std::endl <<
-				"        ###" << std::endl <<
-				"        ###" << std::endl <<
-			std::endl;
-			}
-		ofs.close();
-	}
-	else
-		std::cout << "Bureaucrat " << executor.getName() <<  " cannot execute ShrubberyCreationForm" << std::endl;
-}
-
-ShrubberyCreationForm& ShrubberyCreationForm::operator=( ShrubberyCreationForm const & hrs)
-{
-	std::cout << "ShrubberyCreationForm Assignation operator called" << std::endl;
-	if (this == &hrs)
-		return *this;
-	return *this;
-}
-
-std::ostream	&operator<<(std::ostream &o, ShrubberyCreationForm *a)
-{
-	o << "AForm " << a->getName() << ", signed: " << a->getSigned()
-		<< ", grade to sign: " << a->getGradeSign() << ", grade to exec: " << a->getGradeExec()<< ", target: "
-		<< a->getTarget() << std::endl;
-	return (o);
+	if (executor.getGrade() > this->GetGradeExecute())
+		throw (AForm::NotExecute());
+	else if (this->GetSigned() == false)
+		throw (AForm::NotSigned());
+	std::cout << "Shrubbery tree called" << std::endl;
+	std::ofstream file (this->GetTarget().append("_shrubbery").c_str());
+	file << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "@@@@@@@@@@@@@@@@@@@@@@@@@@" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "     |||||||||||||||" << std::endl;
+	file << "	/|||||||||||||\\" << std::endl;
+	file.close();
 }

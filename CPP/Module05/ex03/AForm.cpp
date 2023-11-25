@@ -5,111 +5,108 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/24 14:31:45 by haze              #+#    #+#             */
-/*   Updated: 2023/11/24 14:31:47 by haze             ###   ########.fr       */
+/*   Created: 2023/11/20 09:43:16 by haze              #+#    #+#             */
+/*   Updated: 2023/11/25 14:26:49 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-
-
 #include "AForm.hpp"
 
-AForm::AForm(void): _name("default"), _isSigned(0), _gradeToSign(150), _gradeToExec(150), _target("default_target")
+AForm::AForm(void):  _name("Francis"), _target("Personne"), _Issigned(false), _grade_sign(50), _grade_execute(50)
 {
-	std::cout <<CYN<< "Default AForm constructor called" <<NC<< std::endl;
-	return;
+	std::cout << "AForm constructor was created" << std::endl;
 }
+
+AForm::AForm(const int grade_sign, const std::string name,  const std::string target, const int grade_exec):_name(name), _target(target), _grade_sign(grade_sign), _grade_execute(grade_exec)
+{
+	if (grade_exec > 150)
+		throw AForm::GradeTooLowException();
+	if (grade_exec < 1)
+		throw AForm::GradeTooHighException();
+	if (grade_sign > 150)
+		throw AForm::GradeTooLowException();
+	if (grade_sign < 1)
+		throw AForm::GradeTooHighException();
+	std::cout << "AForm constructor was created" << std::endl;
+	this->_Issigned = false;
+}
+
+AForm::AForm(const AForm &src): _name(src.GetName()), _grade_sign(src.GetGradeSign()), _grade_execute(src.GetGradeExecute())
+{
+	std::cout << "AForm Copy constructor called" << std::endl;
+}
+
+
+AForm& AForm::operator=( const AForm &src) 
+{
+    if ( this != &src )
+        _Issigned = src.GetSigned();
+    return *this;
+}
+
 
 AForm::~AForm(void)
 {
-	std::cout <<CYN<< this->_name << " AForm destructor called" <<NC<< std::endl;
-	return;
-}
-
-AForm::AForm(AForm const & src): _name(src.getName()), _isSigned(false), _gradeToSign(src.getGradeSign()), _gradeToExec(src.getGradeExec()), _target(src.getTarget())
-{
-	std::cout <<CYN<< "Copy AForm constructor called" <<NC<< std::endl;
-	*this = src;
-	return;
-}
-
-AForm::AForm(std::string name, const int gradeToSign, const int _gradeToExec, std::string target): _name(name), _isSigned(0), _gradeToSign(gradeToSign), _gradeToExec(_gradeToExec), _target(target)
-{
-	std::cout <<CYN<< name <<" AForm constructor called" <<NC<< std::endl;
-	return;
-}
-
-void AForm::execute(Bureaucrat const & executor) const
-{
-	std::cout << "AForm execute function called" << std::endl;
-	(void) executor;
-}
-
-std::string AForm::getName() const
-{
-	return(this->_name);
-}
-
-std::string AForm::getTarget() const
-{
-	return(this->_target);
-}
-
-bool AForm::getSigned() const
-{
-	return(this->_isSigned);
-}
-
-int AForm::getGradeSign() const
-{
-	return(this->_gradeToSign);
-}
-
-int AForm::getGradeExec() const
-{
-	return(this->_gradeToExec);
-}
-
-void AForm::beSigned(Bureaucrat *b)
-{
-	if (b->getGrade() <= this->getGradeSign() && b->getGrade() > 0)
-	{
-		this->_isSigned = 1;
-		std::cout << "Bureaucrat " << b->getName() << " signed " << this->getName() << " form" << std::endl;
-	}
-	else if(b->getGrade() > this->getGradeSign() || b->getGrade() > 150)
-	{
-		this->_isSigned = 0;
-		std::cout << "Bureaucrat " << b->getName() << " couldn't sign " << this->getName() << " form because grade is too low" << std::endl;
-		throw AForm::GradeTooLowException();
-	}
-}
-
-const char *AForm::GradeTooLowException::what(void) const throw()
-{
-	return ("Grade too low");
-};
-
-const char *AForm::GradeTooHighException::what(void) const throw()
-{
-	return ("Grade too high");
-};
-
-AForm& AForm::operator=( AForm const & hrs)
-{
-	std::cout << "AForm Assignation operator called" << std::endl;
-	if (this == &hrs)
-	{
-		return *this;
-	}
-	return *this;
+	std::cout << "AForm deconstructor was created" << std::endl;
 }
 
 
-std::ostream	&operator<<(std::ostream &o, AForm *a)
+std::string AForm::GetName() const 
 {
-	o << "AForm " << a->getName() << ", signed: " << a->getSigned()
-		<< ", grade to sign: " << a->getGradeSign() << ", grade to exec: " << a->getGradeExec()<< ", target: "
-		<< a->getTarget() << std::endl;
-	return (o);
+    return _name;
+}
+
+bool   AForm::GetSigned() const {
+    return _Issigned;
+}
+
+int   AForm::GetGradeSign() const 
+{
+    return _grade_sign;
+}
+
+int   AForm::GetGradeExecute() const 
+{
+    return _grade_execute;
+}
+
+void    AForm::beSigned(const Bureaucrat &src) {
+    if ( src.getGrade() > this->_grade_sign)
+        throw AForm::GradeTooLowException();
+    _Issigned = true;
+}
+
+std::ostream&   operator<<( std::ostream& o, const AForm& src) 
+{
+    o << "------------- AForm Info -------------" << std::endl;
+    o << "AForm name: " << src.GetName() << std::endl
+      << "Grade to sign: " << src.GetGradeSign() << std::endl
+      << "Grade to execute: " << src.GetGradeExecute();
+    return o;
+}
+
+const char * AForm::GradeTooHighException::what() const throw ()
+{
+	return ("Your Grade is too High");
+}
+
+const char * AForm::GradeTooLowException::what() const throw ()
+{
+	return ("Your Grade is too Low");
+}
+
+const char * AForm::NotExecute::what() const throw ()
+{
+	return ("Your grade execution is too Low !");
+}
+
+const char * AForm::NotSigned::what() const throw ()
+{
+	return ("Formulaire Not signed !");
+}
+
+
+std::string AForm::GetTarget() const 
+{
+	return this->_target;
 }
