@@ -1,25 +1,36 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: haze <haze@student.42.fr>                  +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/11/30 09:04:21 by haze              #+#    #+#              #
+#    Updated: 2023/11/30 09:10:12 by haze             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-BUREAUCRAT = main.cpp Base.cpp
+SRC = Base.cpp Function.cpp
 # VARIABLES FOR DOT O
-BUREAUCRAT_OBJ = $(BUREAUCRAT:.cpp=.o)
+SRC_OBJ = $(SRC:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = data
+NAME = base
 RM = rm -rf
 #--------------------------------------------
 #-----------------EXECUTING------------------
 #--------------------------------------------
 all : $(NAME)
-%.o : %.cpp
-	@$(CC) $(CXXFLAGS) -c $< -o $@
-$(NAME) : $(BUREAUCRAT_OBJ)
-	$(CC) $(CXXFLAGS) $(BUREAUCRAT_OBJ) -o $(NAME)
+
+$(NAME) : $(SRC_OBJ)
+	$(CC) $(CXXFLAGS) $(SRC_OBJ) -o $(NAME)
 
 clean :
-	$(RM) $(BUREAUCRAT_OBJ)
+	$(RM) $(SRC_OBJ)
 
 fclean :	clean
 	$(RM) $(NAME)

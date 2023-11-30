@@ -5,18 +5,18 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/25 11:49:20 by haze              #+#    #+#             */
-/*   Updated: 2023/11/25 11:49:53 by haze             ###   ########.fr       */
+/*   Created: 2023/11/30 09:03:55 by haze              #+#    #+#             */
+/*   Updated: 2023/11/30 09:04:36 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef B
-#define B
+#ifndef B_CLASS
+#define B_CLASS
 
 # include "Base.hpp"
 
-class B : 
-	public 
+class B :
+	public
 		Base {};
 
 #endif

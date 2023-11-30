@@ -6,7 +6,7 @@
 /*   By: haze <haze@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/24 16:50:14 by haze              #+#    #+#             */
-/*   Updated: 2023/11/25 11:42:59 by haze             ###   ########.fr       */
+/*   Updated: 2023/11/30 07:27:24 by haze             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int main()
 	std::cout << "Deserialize			:" << data_dese << std::endl;
 	std::cout << "Deserialize			:" << data_dese->name << std::endl;
 	std::cout << "Deserialize			:" << data_dese->number << std::endl;
+	delete data;
 }
