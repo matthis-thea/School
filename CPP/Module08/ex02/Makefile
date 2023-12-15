@@ -1,13 +1,13 @@
 #-----------------VARIABLES------------------
 #--------------------------------------------
 # VARIABLES FOR DOT C
-MAIN = main.cpp Span.cpp
+MAIN = main.cpp
 # VARIABLES FOR DOT O
 MAIN_OBJ = $(MAIN:.cpp=.o)
 # VARIABLES FOR DO A COMPILATION
 CC = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
-NAME = span
+NAME = mutantstack
 RM = rm -rf
 #--------------------------------------------
 #-----------------EXECUTING------------------
