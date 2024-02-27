@@ -40,5 +40,6 @@ the ray-casting technique. the objective was to create a dynamic view within a l
 <img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d1.png">
 <img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d2.png">
 <img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/CUB3D/pictures/cub3d3.png">
+
 ------------------------------------------------------------------------------------------------------------------------------------
 FT_IRC : Real IRC server which follow the RFC 1459: Internet Relay Chat Protocol
