@@ -43,3 +43,10 @@ the ray-casting technique. the objective was to create a dynamic view within a l
 
 ------------------------------------------------------------------------------------------------------------------------------------
 FT_IRC : Real IRC server which follow the RFC 1459: Internet Relay Chat Protocol
+
+------------------------------------------------------------------------------------------------------------------------------------
+INCEPTION : This project consists in having you set up a small infrastructure composed of different services under specific rule. The services are Wordpress, MariaDB and Nginx.
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/accueil.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/db.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/docker.png">
+
