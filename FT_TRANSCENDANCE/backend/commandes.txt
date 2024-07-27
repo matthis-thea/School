@@ -1,0 +1,1 @@
+ pip install django psycopg2 djangorestframework djangorestframework-simplejwt django-two-factor-auth twilio sendgrid djangorestframework-jwt django-cors-headers phonenumbers Pillow django-crontab

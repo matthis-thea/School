@@ -1,0 +1,24 @@
+FROM alpine:latest
+
+RUN apk update && \
+    apk upgrade && \
+    apk add postgresql && \
+    apk add gcc && \
+    apk add python3 && \
+    apk add python3-dev && \
+    apk add musl-dev && \
+    apk add libffi-dev && \
+    apk add openssl
+
+
+RUN mkdir /backend; \
+    chmod +rwx /backend
+WORKDIR /backend
+COPY . .
+
+COPY launchDaphne.sh /launchDaphne.sh
+RUN chmod +x /launchDaphne.sh
+
+EXPOSE 8001
+
+CMD ["sh", "/launchDaphne.sh"]

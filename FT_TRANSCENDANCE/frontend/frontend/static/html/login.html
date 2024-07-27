@@ -1,0 +1,29 @@
+<div class="container text-center" id="form_login">
+	<div class="row" style="margin-top: 25vh !important">
+		<div class="col mb-3">
+		</div>
+		<div class="col-6 colMid bg-white rounded-3 mt-5 py-5">
+			<div class="form mb-3">
+				<h1 class="Montserrat mb-5 fw-semibold">Login</h1>
+				<form id="LoginForm" class="mb-3">
+					<p>
+						<label for="id_username">Username:</label>
+						<input type="text" name="username" maxlength="30" required id="id_username">
+					</p>
+					<p>
+						<label for="id_password">Password:</label>
+						<input type="password" name="password" autocomplete="new-password" maxlength="30" required
+							id="id_password">
+					</p>
+					<div id="2FA">
+					</div>
+					<div id="LoginErrors"></div>
+					<button id="submit" class="mb-3 btn-connecter Montserrat fw-semibold">Submit</button>
+				</form>
+				<a href="/signUp" class="nav__link" data-link>Sign Up</a>
+			</div>
+		</div>
+		<div class="col mb-3">
+		</div>
+	</div>
+</div>
