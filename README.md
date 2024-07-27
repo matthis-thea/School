@@ -46,7 +46,17 @@ FT_IRC : Real IRC server which follow the RFC 1459: Internet Relay Chat Protocol
 
 ------------------------------------------------------------------------------------------------------------------------------------
 INCEPTION : This project consists in having you set up a small infrastructure composed of different services under specific rule. The services are Wordpress, MariaDB and Nginx.
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/accueil.png">
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/db.png">
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/INCEPTION/docker.png">
+
+------------------------------------------------------------------------------------------------------------------------------------
+FT_TRANSCENDANCE : Website with Django Rest API, Websocket Django Channels, Postgresql Database and Javascript Frontend. The associated modules are:
+- Possibility of remote games.
+- Friend management, personal information modification
+- V/L Statistics, Game history
+- JWT and 2FA
+- Responsive, Support all types of devices and compatibility different browsers
+(The backend is a draft because we didn’t go back to the code to optimize it and make it cleaner)
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/game.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/menu.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/ami.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/stats.png">
 
