@@ -55,8 +55,8 @@ FT_TRANSCENDANCE : Website with Django Rest API, Websocket Django Channels, Post
 - JWT and 2FA
 - Responsive, Support all types of devices and compatibility different browsers
 (The backend is a draft because we didn’t go back to the code to optimize it and make it cleaner)
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/game.png">
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/menu.png">
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/ami.png">
-<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/stats.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/picture/game.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/picture/menu.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/picture/ami.png">
+<img width="278" alt="Screen Shot 2023-01-28 at 7 34 38 PM" src="https://github.com/matthis-thea/School_projects/blob/main/FT_TRANSCENDENCE/picture/stats.png">
 
